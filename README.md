@@ -1,27 +1,60 @@
 # Awesome-AutoML-Papers
 
-A curated list of automated machine learning papers, articles, tutorials, slides and projects.
+**Awesome-AutoML-Papers** is a curated list of *automated machine learning* papers, articles, tutorials, slides and projects. **Star** this repository, and then you can keep abreast of the latest developments of this booming research field. Thanks to all the people who made contributions to this project. Join us and you are welcome to be a contributor.
 
-# Introduction to AutoML
-Machine learning (ML) has achieved considerable successes in recent years and an ever-growing number of disciplines rely on it. However, this success crucially relies on human machine learning experts to perform the following tasks:
-+ Preprocess the data
-+ Select appropriate features
-+ Select an appropriate model family
-+ Optimize model hyperparameters
-+ Postprocess machine learning models
+<div style="text-align: center">
+<img src="resources/banner.png" atl="banner"/>
+</div>
+
+# What is AutoML?
+*Automated Machine Learning* (AutoML) provides methods and processes to make Machine Learning available for non-Machine Learning experts, to improve efficiency of Machine Learning and to accelerate research on Machine Learning.
+
+Machine Learning (ML) has achieved considerable successes in recent years and an ever-growing number of disciplines rely on it. However, this success crucially relies on human machine learning experts to perform the following tasks:
++ Preprocess the data,
++ Select appropriate features,
++ Select an appropriate model family,
++ Optimize model hyperparameters,
++ Postprocess machine learning models,
 + Critically analyze the results obtained.
 
-As the complexity of these tasks is often beyond non-ML-experts, the rapid growth of machine learning applications has created a demand for off-the-shelf machine learning methods that can be used easily and without expert knowledge. We call the resulting research area that targets progressive automation of machine learning *AutoML*.
+As the complexity of these tasks is often beyond non-ML-experts, the rapid growth of machine learning applications has created a demand for off-the-shelf machine learning methods that can be used easily and without expert knowledge. We call the resulting research area that targets progressive automation of machine learning *AutoML*. As a new sub-area in machine learning, *AutoML* has got more attention not only in machine learning but also in computer vision, natural language processing and graph computing.
 
-AutoML draws on many disciplines of machine learning, prominently including
-+ Bayesian optimization
-+ Regression models for structured data and big data
-+ Meta learning
-+ Transfer learning, and
-+ Combinatorial optimization.
+There are no formal definition of *AutoML*. From the descriptions of most papers，the basic procedure of *AutoML* can be shown as the following.
+
+<div style="text-align: center">
+<img src="resources/procedure.jpg" width="600px" atl="figure1"/>
+</div>
+
+
+*AutoML* approaches are already mature enough to rival and sometimes even outperform human machine learning experts. Put simply, *AutoML* can lead to improved performance while saving substantial amounts of time and money, as machine learning experts are both hard to find and expensive. As a result, commercial interest in *AutoML* has grown dramatically in recent years, and several major tech companies and start-up companies are now developing their own *AutoML* systems. An overview comparison of some of them can be summarized to the following table.
+
+| Company    | AutoFE     | HPO        | NAS        |
+| :--------: | :--------: | :--------: | :--------: |
+| 4paradigm  |     √      |      √     |      ×     |
+| Alibaba    |     ×      |      √     |      ×     |
+| Baidu      |     ×      |      ×     |      √     |
+| Google     |     √      |      √     |      √     |
+| H2O.ai     |     √      |      √     |      ×     |
+| Microsoft  |     ×      |      √     |      √     |
+| RapidMiner |     √      |      √     |      ×     |
+| Tencent    |     ×      |      √     |      ×     |
+| Transwarp  |     √      |      √     |      √     |
+
+
+**Awesome-AutoML-Papers** includes very up-to-date overviews of the bread-and-butter techniques we need in *AutoML*:
++ Automated Data Clean (Auto Clean)
++ Automated Feature Enginnering (Auto FE)
++ Hyperparameter Optimization (HPO)
++ Meta-Learning
++ Neural Architecture Search (NAS)
+
+
+<div style="text-align: center">
+<img src="resources/automl.png" atl="automl"/>
+</div>
+
 
 # Table of Contents
-
 + [Papers](#papers)
   - [Automated Feature Engineering](#automated-feature-engineering)
     - [Expand Reduce](#expand-reduce)
@@ -77,6 +110,7 @@ AutoML draws on many disciplines of machine learning, prominently including
   - 2010 | Feature Selection as a One-Player Game | Romaric Gaudel, Michele Sebag | ICML | [`PDF`](https://hal.archives-ouvertes.fr/inria-00484049/document)
 ### Architecture Search
 + #### Evolutionary Algorithms
+  - 2019 | Evolutionary Neural AutoML for Deep Learning | Jason Liang, et al. | arXiv | [`PDF`](https://arxiv.org/abs/1902.06827)
   - 2017 | Large-Scale Evolution of Image Classifiers | Esteban Real, et al. | PMLR | [`PDF`](https://arxiv.org/abs/1703.01041)
   - 2002 | Evolving Neural Networks through Augmenting Topologies | Kenneth O.Stanley, Risto Miikkulainen | Evolutionary Computation | [`PDF`](http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf)
 + #### Local Search
@@ -84,20 +118,27 @@ AutoML draws on many disciplines of machine learning, prominently including
 + #### Meta Learning
   - 2016 | Learning to Optimize | Ke Li, Jitendra Malik | arXiv | [`PDF`](https://arxiv.org/pdf/1606.01885.pdf)
 + #### Reinforcement Learning
+  - 2018 | AMC: AutoML for Model Compression and Acceleration on Mobile Devices | Yihui He, et al. | ECCV | [`PDF`](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yihui_He_AMC_Automated_Model_ECCV_2018_paper.pdf)
   - 2018 | Efficient Neural Architecture Search via Parameter Sharing | Hieu Pham, et al. | arXiv | [`PDF`](https://arxiv.org/abs/1802.03268)
   - 2017 | Neural Architecture Search with Reinforcement Learning | Barret Zoph, Quoc V. Le | ICLR | [`PDF`](https://arxiv.org/pdf/1611.01578.pdf)
 + #### Transfer Learning
   - 2017 | Learning Transferable Architectures for Scalable Image Recognition | Barret Zoph, et al. | arXiv | [`PDF`](https://arxiv.org/abs/1707.07012)
 + #### Network Morphism
   - 2018 | Efficient Neural Architecture Search with Network Morphism | Haifeng Jin, et al. | arXiv | [`PDF`](https://arxiv.org/abs/1806.10282)
++ #### Continuous Optimization
+  - 2018 | Neural Architecture Optimization | Renqian Luo, et al. | arXiv | [`PDF`](https://arxiv.org/abs/1808.07233)
+
 ### Frameworks
-+ 2017 | Google Vizier: A Service for Black-Box Optimization | Daniel Golovin, et al. | KDD |[`PDF`](https://static.googleusercontent.com/media/research.google.com/zh-CN//pubs/archive/46180.pdf)
++ 2019 | Evolutionary Neural AutoML for Deep Learning | Jason Liang, et al. | arXiv | [`PDF`](https://arxiv.org/abs/1902.06827)
 + 2017 | ATM: A Distributed, Collaborative, Scalable System for Automated Machine Learning | T. Swearingen, et al. | IEEE | [`PDF`](https://cyphe.rs/static/atm.pdf)
++ 2017 | Google Vizier: A Service for Black-Box Optimization | Daniel Golovin, et al. | KDD |[`PDF`](https://static.googleusercontent.com/media/research.google.com/zh-CN//pubs/archive/46180.pdf)
 + 2015 | AutoCompete: A Framework for Machine Learning Competitions | Abhishek Thakur, et al. | ICML | [`PDF`](https://arxiv.org/pdf/1507.02188.pdf)
+
 ### Hyperparameter Optimization
 + #### Bayesian Optimization
-  - 2018 | High-Dimensional Bayesian Optimization via Additive Models with Overlapping Groups. |  PMLR | [`PDF`](https://arxiv.org/pdf/1802.07028v2.pdf)
   - 2018 | A Tutorial on Bayesian Optimization. | [`PDF`](https://arxiv.org/pdf/1807.02811.pdf)
+  - 2018 | Efficient High Dimensional Bayesian Optimization with Additivity and Quadrature Fourier Features | Mojmír Mutný, et al. | NeurIPS | [`PDF`](https://papers.nips.cc/paper/8115-efficient-high-dimensional-bayesian-optimization-with-additivity-and-quadrature-fourier-features.pdf)
+  - 2018 | High-Dimensional Bayesian Optimization via Additive Models with Overlapping Groups. |  PMLR | [`PDF`](https://arxiv.org/pdf/1802.07028v2.pdf)
   - 2016 | Bayesian Optimization with Robust Bayesian Neural Networks | Jost Tobias Springenberg， et al. | NIPS | [`PDF`](https://papers.nips.cc/paper/6117-bayesian-optimization-with-robust-bayesian-neural-networks.pdf)
   - 2016 | Scalable Hyperparameter Optimization with Products of Gaussian Process Experts | Nicolas Schilling, et al. | PKDD | [`PDF`](https://link.springer.com/chapter/10.1007/978-3-319-46128-1_3)
   - 2016 | Taking the Human Out of the Loop: A Review of Bayesian Optimization | Bobak Shahriari, et al. | IEEE | [`PDF`](http://ieeexplore.ieee.org/document/7352306/)
@@ -117,8 +158,8 @@ AutoML draws on many disciplines of machine learning, prominently including
 + #### Evolutionary Algorithms
   - 2018 | Autostacker: A Compositional Evolutionary Learning System | Boyuan Chen, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1803.00684.pdf)
   - 2017 | Large-Scale Evolution of Image Classifiers | Esteban Real, et al. | PMLR | [`PDF`](https://arxiv.org/pdf/1703.01041.pdf)
-  - 2016 | Evaluation of a tree-based pipeline optimization tool for automating data science | Randal S. Olson, et al. | GECCO | [`PDF`](https://dl.acm.org/citation.cfm?id=2908918)
   - 2016 | Automating biomedical data science through tree-based pipeline optimization | Randal S. Olson, et al. | ECAL | [`PDF`](https://arxiv.org/pdf/1601.07925.pdf)
+  - 2016 | Evaluation of a tree-based pipeline optimization tool for automating data science | Randal S. Olson, et al. | GECCO | [`PDF`](https://dl.acm.org/citation.cfm?id=2908918)
 + ####  Lipschitz Functions
   - 2017 | Global Optimization of Lipschitz functions | C´edric Malherbe, Nicolas Vayatis | arXiv | [`PDF`](https://arxiv.org/pdf/1703.02628.pdf)
 + #### Local Search
@@ -137,6 +178,7 @@ AutoML draws on many disciplines of machine learning, prominently including
   - 2016 | Flexible Transfer Learning Framework for Bayesian Optimisation | Tinu Theckel Joy, et al. | PAKDD | [`PDF`](https://link.springer.com/chapter/10.1007/978-3-319-31753-3_9)
   - 2016 | Hyperparameter Optimization Machines | Martin Wistuba, et al. | DSAA | [`PDF`](http://ieeexplore.ieee.org/abstract/document/7796889/)
   - 2013 | Collaborative Hyperparameter Tuning | R´emi Bardenet, et al. | ICML | [`PDF`](http://proceedings.mlr.press/v28/bardenet13.pdf)
+
 ### Miscellaneous
 - 2018 | Accelerating Neural Architecture Search using Performance Prediction | Bowen Baker, et al. | ICLR | [`PDF`](https://openreview.net/pdf?id=BJypUGZ0Z)
 - 2017 | Automatic Frankensteining: Creating Complex Ensembles Autonomously | Martin Wistuba, et al. | SIAM | [`PDF`](http://epubs.siam.org/doi/pdf/10.1137/1.9781611974973.83)
@@ -147,69 +189,107 @@ AutoML draws on many disciplines of machine learning, prominently including
 ### Meta Learning
 + 2008 | Metalearning - A Tutorial | [`PDF`](https://pdfs.semanticscholar.org/5794/1a4891f673cadf06fba02419372aad85c3bb.pdf)
 
-# Articles
-### Bayesian Optimization
-+ 2016 | Bayesian Optimization for Hyperparameter Tuning | [`Link`](https://arimo.com/data-science/2016/bayesian-optimization-hyperparameter-tuning/)
-### Meta Learning
-+ 2017 | Why Meta-learning is Crucial for Further Advances of Artificial Intelligence? | [`Link`](https://chatbotslife.com/why-meta-learning-is-crucial-for-further-advances-of-artificial-intelligence-c2df55959adf)
-+ 2017 | Learning to learn | [`Link`](http://bair.berkeley.edu/blog/2017/07/18/learning-to-learn/)
 
-# Slides
-### Automated Feature Engineering
-+ Automated Feature Engineering for Predictive Modeling | Udyan Khurana, etc al. | [`PDF`](https://github.com/hibayesian/awesome-automl-papers/blob/master/resources/slides/%5Bslides%5D-automated-feature-engineering-for-predictive-modeling.pdf)
-### Hyperparameter Optimization
-#### Bayesian Optimization
-+ Bayesian Optimisation | [`PDF`](https://github.com/hibayesian/awesome-automl-papers/blob/master/resource/slides/%5Bslides%5D-bayesian-optimisation.pdf)
-+ A Tutorial on Bayesian Optimization for Machine Learning | [`PDF`](https://github.com/hibayesian/awesome-automl-papers/blob/master/resource/slides/%5Bslides%5D-a-tutorial-on-bayesian-optimization-for-machine-learning.pdf)
+# Blog
+| Type       | Blog Title | Link       |
+| :--------: | :--------: | :--------: |
+| HPO        | Bayesian Optimization for Hyperparameter Tuning | [`Link`](https://arimo.com/data-science/2016/bayesian-optimization-hyperparameter-tuning/) |
+| Meta-Learning | Learning to learn | [`Link`](http://bair.berkeley.edu/blog/2017/07/18/learning-to-learn/) |
+| Meta-Learning | Why Meta-learning is Crucial for Further Advances of Artificial Intelligence? | [`Link`](https://chatbotslife.com/why-meta-learning-is-crucial-for-further-advances-of-artificial-intelligence-c2df55959adf) |
+
 
 # Books
-### Meta Learning
-+ 2009 | Metalearning - Applications to Data Mining | Springer | [`PDF`](http://www.springer.com/la/book/9783540732624)
+| Year of Publication     | Type    | Book Title | Authors    | Publisher  | Link       |
+| :--------: | :--------: | :--------: | :--------: | :--------: | :--------: |
+| 2009       | Meta-Learning | Metalearning - Applications to Data Mining | Brazdil, P., Giraud Carrier, C., Soares, C., Vilalta, R. | Springer | [`Download`](http://www.springer.com/la/book/9783540732624) |
+| 2019       | HPO, Meta-Learning, NAS | AutoML: Methods, Systems, Challenges | Frank Hutter, Lars Kotthoff, Joaquin Vanschoren |         | [`Download`](https://www.automl.org/book/) | 
+
 
 # Projects
-+ Advisor | `Python` | `Open Source` | [`Code`](https://github.com/tobegit3hub/advisor)
-+ Auger | `Python` | `Commercial` | [`Link`](https://auger.ai)
-+ auto-sklearn | `Python` | `Open Source` | [`Code`](https://github.com/automl/auto-sklearn)
-+ Auto-Keras | `Python` | `Open Source` | [`Code`](https://github.com/jhfjhfj1/autokeras)
-+ Auto-WEKA | `Java` | `Open Source` | [`Code`](https://github.com/automl/autoweka)
-+ Hyperopt | `Python` | `Open Source` | [`Code`](https://github.com/hyperopt/hyperopt)
-+ Hyperopt-sklearn | `Python` | `Open Source` | [`Code`](https://github.com/hyperopt/hyperopt-sklearn)
-+ SigOpt | `Python` | `Commercial` | [`Link`](https://sigopt.com/)
-+ SMAC3 | `Python` | `Open Source` | [`Code`](https://github.com/automl/SMAC3)
-+ RoBO | `Python` | `Open Source` | [`Code`](https://github.com/automl/RoBO)
-+ BayesianOptimization | `Python` | `Open Source` | [`Code`](https://github.com/fmfn/BayesianOptimization)
-+ Scikit-Optimize | `Python` | `Open Source` | [`Code`](https://github.com/scikit-optimize/scikit-optimize)
-+ HyperBand | `Python` | `Open Source` | [`Code`](https://github.com/zygmuntz/hyperband)
-+ BayesOpt | `C++` | `Open Source` | [`Code`](https://github.com/rmcantin/bayesopt)
-+ Optunity | `Python` | `Open Source` | [`Code`](https://github.com/claesenm/optunity)
-+ TPOT | `Python` | `Open Source` | [`Code`](https://github.com/rhiever/tpot)
-+ ATM | `Python` | `Open Source` | [`Code`](https://github.com/HDI-Project/ATM)
-+ Cloud AutoML | `Python` | `Commercial`| [`Link`](https://cloud.google.com/automl/)
-+ H2O | `Python` | `Commercial` | [`Link`](https://www.h2o.ai/)
-+ DataRobot | `Python` | `Commercial` | [`Link`](https://www.datarobot.com/)
-+ MLJAR | `Python` | `Commercial` | [`Link`](https://mljar.com/)
-+ MateLabs | `Python` | `Commercial` | [`Link`](http://matelabs.in/)
-+ FAR-HO | `Python` | `Open Source` | [`Code`](https://github.com/lucfra/FAR-HO)
-+ TransmogrifAI | `Scala` | `Open Source` | [`Code`](https://github.com/salesforce/TransmogrifAI)
-+ DEvol | `Python` | `Open Source` | [`Code`](https://github.com/joeddav/devol)
-+ HyperparameterHunter | `Python` | `Open Source` | [`Code`](https://github.com/HunterMcGushion/hyperparameter_hunter)
+| Project    | Type       | Language   | License    | Link       |
+| :--------: | :--------: | :--------: | :--------: | :--------: |
+| AdaNet     | NAS        | Python     | Apache-2.0 | [`Github`](https://github.com/tensorflow/adanet) |
+| Advisor    | HPO        | Python     | Apache-2.0 | [`Github`](https://github.com/tobegit3hub/advisor) |
+| AMLA       | HPO, NAS   | Python     | Apache-2.0 | [`Github`](https://github.com/CiscoAI/amla) |
+| ATM        | HPO        | Python     | MIT        | [`Github`](https://github.com/HDI-Project/ATM) |
+| Auger      | HPO        | Python     | Commercial | [`Homepage`](https://auger.ai)
+| Auto-Keras | NAS        | Python     | [`License`](https://github.com/keras-team/autokeras/blob/master/LICENSE.txt) | [`Github`](https://github.com/keras-team/autokeras) |
+| AutoML Vision | NAS     | Python     | Commercial | [`Homepage`](https://cloud.google.com/vision/) |
+| AutoML Video Intelligence            | NAS        | Python    | Commercial | [`Homepage`](https://cloud.google.com/video-intelligence/) |
+| AutoML Natural Language | NAS        | Python     | Commercial | [`Homepage`](https://cloud.google.com/natural-language/) |
+| AutoML Translation      | NAS        | Python     | Commercial | [`Homepage`](https://cloud.google.com/translate/) |
+| AutoML Tables           | AutoFE, HPO             | Python    | Commercial | [`Homepage`](https://cloud.google.com/automl-tables/) |
+| auto-sklearn | HPO      | Python     | [`License`](https://github.com/automl/auto-sklearn/blob/master/LICENSE.txt) | [`Github`](https://github.com/automl/auto-sklearn) |
+| auto_ml     | HPO       | Python     | MIT        | [`Github`](https://github.com/ClimbsRocks/auto_ml) |
+| BayesianOptimization | HPO | Python  | MIT        | [`Github`](https://github.com/fmfn/BayesianOptimization) |
+| BayesOpt    | HPO       | C++        | AGPL-3.0   | [`Github`](https://github.com/rmcantin/bayesopt) |
+| comet       | HPO       | Python     | Commercial | [`Homepage`](https://www.comet.ml) |
+| DataRobot   | HPO       | Python     | Commercial | [`Homepage`](https://www.datarobot.com/) |
+| DEvol       | NAS       | Python     | MIT        | [`Github`](https://github.com/joeddav/devol) |
+| Driverless AI | AutoFE  | Python     | Commercial | [`Homepage`](https://www.h2o.ai/products/h2o-driverless-ai/) |
+| FAR-HO      | HPO       | Python     | MIT        | [`Github`](https://github.com/lucfra/FAR-HO) |
+| H2O AutoML  | HPO       | Python, R, Java, Scala | Apache-2.0 | [`Github`](https://github.com/h2oai/h2o-3/) |
+| HpBandSter  | HPO       | Python     | BSD-3-Clause | [`Github`](https://github.com/automl/HpBandSter) |
+| HyperBand   | HPO       | Python     | [`License`](https://github.com/zygmuntz/hyperband/blob/master/LICENSE) | [`Github`](https://github.com/zygmuntz/hyperband) |
+| Hyperopt    | HPO       | Python     | [`License`](https://github.com/hyperopt/hyperopt/blob/master/LICENSE.txt) | [`Github`](https://github.com/hyperopt/hyperopt) |
+| Hyperopt-sklearn | HPO  | Python    | [`License`](https://github.com/hyperopt/hyperopt-sklearn/blob/master/LICENSE.txt) | [`Github`](https://github.com/hyperopt/hyperopt-sklearn) |
+| Hyperparameter Hunter | HPO | Python | MIT        | [`Github`](https://github.com/HunterMcGushion/hyperparameter_hunter) |
+| Katib       | HPO       | Python     | Apache-2.0 | [`Github`](https://github.com/kubeflow/katib) |
+| MateLabs    | HPO       | Python     | Commercial | [`Github`](http://matelabs.in/) |
+| Milano      | HPO       | Python     | Apache-2.0 | [`Github`](https://github.com/NVIDIA/Milano) |
+| MLJAR       | HPO       | Python     | Commercial | [`Homepage`](https://mljar.com/) |
+| nasbot      | NAS       | Python     | MIT        | [`Github`](https://github.com/kirthevasank/nasbot) |
+| neptune     | HPO       | Python     | Commercial | [`Homepage`](https://neptune.ml/) |
+| NNI         | HPO, NAS  | Python     | MIT        | [`Github`](https://github.com/Microsoft/nni) |
+| Optunity    | HPO       | Python     | [`License`](https://github.com/claesenm/optunity/blob/master/LICENSE.txt) | [`Github`](https://github.com/claesenm/optunity) |
+| R2.ai       | HPO       |            | Commercial | [`Homepage`](https://r2.ai/) |
+| RBFOpt      | HPO       | Python     | [`License`](https://github.com/coin-or/rbfopt/blob/master/LICENSE) | [`Github`](https://github.com/coin-or/rbfopt) |
+| RoBO        | HPO       | Python     | BSD-3-Clause | [`Github`](https://github.com/automl/RoBO) |
+| Scikit-Optimize | HPO   | Python     | [`License`](https://github.com/scikit-optimize/scikit-optimize/blob/master/LICENSE.md) | [`Github`](https://github.com/scikit-optimize/scikit-optimize) |
+| SigOpt      | HPO       | Python     | Commercial | [`Homepage`](https://sigopt.com/) |
+| SMAC3       | HPO       | Python     | [`License`](https://github.com/automl/SMAC3/blob/master/LICENSE) | [`Github`](https://github.com/automl/SMAC3) |
+| TPOT        | AutoFE, HPO | Python   | LGPL-3.0   | [`Github`](https://github.com/rhiever/tpot) | 
+| TransmogrifAI | HPO     | Scala      | BSD-3-Clause | [`Github`](https://github.com/salesforce/TransmogrifAI) |
+| Tune        | HPO       | Python     | Apache-2.0 | [`Github`](https://github.com/ray-project/ray/tree/master/python/ray/tune) |
+| Xcessiv     | HPO       | Python     | Apache-2.0 | [`Github`](https://github.com/reiinakano/xcessiv) |
 
-# Prominent Researchers
-+ [Frank Hutter](http://aad.informatik.uni-freiburg.de/people/hutter/index.html) | University of Freiburg
-+ [Martin Wistuba](https://researcher.watson.ibm.com/researcher/view.php?person=ibm-Martin.Wistuba) | IBM Research
+
+# Slides
+| Type    | Slide Title | Authors    | Link       |
+| :--------: | :--------: | :--------: | :--------: |
+| AutoFE     | Automated Feature Engineering for Predictive Modeling | Udyan Khurana, etc al. | [`Download`](https://github.com/hibayesian/awesome-automl-papers/blob/master/resources/slides/%5Bslides%5D-automated-feature-engineering-for-predictive-modeling.pdf) |
+| HPO     | A Tutorial on Bayesian Optimization for Machine Learning | Ryan P. Adams | [`Download`](https://github.com/hibayesian/awesome-automl-papers/blob/master/resources/slides/%5Bslides%5D-a-tutorial-on-bayesian-optimization-for-machine-learning.pdf) |
+| HPO     | Bayesian Optimisation | Gilles Louppe | [`Download`](https://github.com/hibayesian/awesome-automl-papers/blob/master/resources/slides/%5Bslides%5D-bayesian-optimisation.pdf) |
+
 
 # Acknowledgement
 Special thanks to everyone who contributed to this project.
-+ [endymecy](https://github.com/endymecy)
-+ [tengben0905](https://github.com/tengben0905)
-+ [Saket Maheshwary](https://github.com/sakimahesh)
-+ [derekflint](https://github.com/derekflint)
-+ [Randy Olson](https://github.com/rhiever)
-+ [sophia-wright-blue](https://github.com/sophia-wright-blue)
 
-# Licenses
-Awesome-AutoML-Papers is available under Apache Licenses 2.0.
+| Name       | Bio        |
+| :--------: | :--------: |
+| [Alexander Robles](https://github.com/Alro10) | PhD Student @UNICAMP-Brazil |
+| [derekflint](https://github.com/derekflint) | |
+| [Eric](https://github.com/ffengENG) | |
+| [Erin LeDell](https://github.com/ledell) | Chief Machine Learning Scientist @H2O.ai |
+| [fwcore](https://github.com/fwcore) | |
+| [koala](https://github.com/endymecy) | Senior Researcher @Tencent |
+| [Lilian Besson](https://github.com/naereen) | PhD Student @CentraleSupélec |
+| [罗磊](https://github.com/luoleicn) | |
+| [Richard Liaw](https://github.com/richardliaw) | PhD Student @UC Berkeley|
+| [Randy Olson](https://github.com/rhiever) | Lead Data Scientist @LifeEGX |
+| [Slava Kurilyak](https://github.com/slavakurilyak) | Founder, CEO @Produvia |
+| [Saket Maheshwary](https://github.com/saket-maheshwary) | AI Researcher |
+| [shaido987](https://github.com/shaido987) | |
+| [sophia-wright-blue](https://github.com/sophia-wright-blue) | |
+| [tengben0905](https://github.com/tengben0905) | |
+| [xuehui](https://github.com/xuehui1991) | @Microsoft |
+| [Yihui He](https://github.com/yihui-he) | Grad Student @CMU  |
+
 
 # Contact & Feedback
 If you have any suggestions (missing papers, new papers, key researchers or typos), feel free to pull a request. Also you can mail to:
-+ hibayesian (hibayesian@gmail.com).
++ Mark Lin (hibayesian@gmail.com).
+
+
+# Licenses
+Awesome-AutoML-Papers is available under Apache Licenses 2.0.
